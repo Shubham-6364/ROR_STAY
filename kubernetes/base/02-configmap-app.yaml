@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ror-stay-config
+  namespace: ror-stay
+data:
+  ENVIRONMENT: "production"
+  DEBUG: "false"
+  JWT_ALGORITHM: "HS256"
+  JWT_EXPIRATION_HOURS: "24"
+  CORS_ORIGINS: "[\"http://localhost\", \"http://localhost:3000\", \"http://localhost:80\"]"
+  REACT_APP_API_BASE_URL: "/api"
+  REACT_APP_ENABLE_ADMIN: "1"
+  GENERATE_SOURCEMAP: "false"

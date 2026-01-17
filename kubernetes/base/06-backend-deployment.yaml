@@ -1,0 +1,60 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+  namespace: ror-stay
+spec:
+  replicas: 2  # Can scale horizontally
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+      - name: backend
+        image: ror-stay-backend:latest  # Replace with your registry image
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8000
+          name: http
+        env:
+        - name: MONGO_URL
+          valueFrom:
+            secretKeyRef:
+              name: ror-stay-secrets
+              key: mongo-url
+        - name: DB_NAME
+          valueFrom:
+            secretKeyRef:
+              name: ror-stay-secrets
+              key: db-name
+        - name: JWT_SECRET_KEY
+          valueFrom:
+            secretKeyRef:
+              name: ror-stay-secrets
+              key: jwt-secret
+        envFrom:
+        - configMapRef:
+            name: ror-stay-config
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "250m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+        livenessProbe:
+          httpGet:
+            path: /api/health
+            port: 8000
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /api/health
+            port: 8000
+          initialDelaySeconds: 10
+          periodSeconds: 5

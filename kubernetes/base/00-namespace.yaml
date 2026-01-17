@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: ror-stay
+  labels:
+    name: ror-stay
+    environment: production

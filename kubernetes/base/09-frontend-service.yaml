@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend-service
+  namespace: ror-stay
+spec:
+  type: ClusterIP
+  selector:
+    app: frontend
+  ports:
+  - port: 3000
+    targetPort: 3000
+    name: http

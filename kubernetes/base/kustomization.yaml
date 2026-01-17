@@ -1,0 +1,18 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: ror-stay
+
+resources:
+  - 00-namespace.yaml
+  - 01-secrets.yaml
+  - 02-configmap-app.yaml
+  - 03-persistentvolumeclaim.yaml
+  - 04-mongodb-statefulset.yaml
+  - 05-mongodb-service.yaml
+  - 06-backend-deployment.yaml
+  - 07-backend-service.yaml
+  - 08-frontend-deployment.yaml
+  - 09-frontend-service.yaml
+  - 10-nginx-configmap.yaml
+  - 11-nginx-deployment.yaml
+  - 12-nginx-service.yaml

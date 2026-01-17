@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <style>
+      .logo-text { font-family: Arial, sans-serif; font-weight: bold; fill: #1e88e5; }
+    </style>
+  </defs>
+  
+  <!-- Location Pin with House -->
+  <g transform="translate(200, 120)">
+    <!-- Pin Shape -->
+    <path d="M-40 0 C-40 -22 -22 -40 0 -40 C22 -40 40 -22 40 0 C40 13 27 27 0 67 C-27 27 -40 13 -40 0 Z" fill="#1e88e5"/>
+    
+    <!-- House -->
+    <g transform="translate(0, -20)">
+      <rect x="-17" y="-7" width="34" height="20" rx="3" fill="white"/>
+      <path d="M-20 -7 L0 -20 L20 -7 Z" fill="#1e88e5"/>
+      <rect x="-15" y="-17" width="4" height="10" fill="#1e88e5"/>
+      
+      <!-- Windows -->
+      <rect x="-12" y="-3" width="4" height="4" rx="1" fill="#1e88e5"/>
+      <rect x="-5" y="-3" width="4" height="4" rx="1" fill="#1e88e5"/>
+      <rect x="-12" y="3" width="4" height="4" rx="1" fill="#1e88e5"/>
+      <rect x="-5" y="3" width="4" height="4" rx="1" fill="#1e88e5"/>
+    </g>
+  </g>
+  
+  <!-- Compressed Text -->
+  <text x="200" y="220" text-anchor="middle" class="logo-text" font-size="32">ROR STAY</text>
+</svg>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <!-- Background -->
+  <rect width="1024" height="1024" fill="#f8fafc"/>
+  
+  <!-- Logo Container -->
+  <g transform="translate(512, 300)">
+    <!-- Location Pin Base -->
+    <path d="M-120 0 C-120 -66.3 -66.3 -120 0 -120 C66.3 -120 120 -66.3 120 0 C120 40 80 80 0 200 C-80 80 -120 40 -120 0 Z" fill="#1e88e5"/>
+    
+    <!-- House Shape -->
+    <g transform="translate(0, -60)">
+      <!-- House Base -->
+      <rect x="-50" y="-20" width="100" height="60" rx="8" fill="white"/>
+      
+      <!-- Roof -->
+      <path d="M-60 -20 L0 -60 L60 -20 Z" fill="#1e88e5"/>
+      
+      <!-- Chimney -->
+      <rect x="-45" y="-50" width="12" height="30" fill="#1e88e5"/>
+      
+      <!-- Windows (2x2 grid) -->
+      <rect x="-35" y="-10" width="12" height="12" rx="2" fill="#1e88e5"/>
+      <rect x="-15" y="-10" width="12" height="12" rx="2" fill="#1e88e5"/>
+      <rect x="-35" y="8" width="12" height="12" rx="2" fill="#1e88e5"/>
+      <rect x="-15" y="8" width="12" height="12" rx="2" fill="#1e88e5"/>
+    </g>
+  </g>
+  
+  <!-- Text -->
+  <g transform="translate(512, 650)">
+    <text x="0" y="0" text-anchor="middle" font-family="Arial, sans-serif" font-size="120" font-weight="bold" fill="#1e88e5">ROR STAY</text>
+  </g>
+</svg>

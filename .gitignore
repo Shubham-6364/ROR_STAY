@@ -1,0 +1,82 @@
+# Environment files (CRITICAL - Contains sensitive data)
+.env
+.env.local
+.env.*.local
+*.env
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+logs/
+*.log.*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Dependencies
+node_modules/
+frontend/node_modules/
+backend/__pycache__/
+backend/*.pyc
+backend/*.pyo
+backend/*.pyd
+*.egg-info/
+dist/
+build/
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Testing
+coverage/
+.nyc_output/
+*.cover
+.coverage
+.pytest_cache/
+
+# Docker volumes and data
+mongodb/data/
+mongodb/logs/
+*.sock
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+Downloads/
+snap/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Build artifacts
+frontend/build/
+backend/dist/
+*.tar.gz
+*.zip
+
+# Secrets and keys
+*.pem
+*.key
+*.crt
+secrets/
+credentials/
+
+# Database dumps
+*.dump
+*.sql
+backups/*.tar.gz
